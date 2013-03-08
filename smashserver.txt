@@ -1,0 +1,72 @@
+Epoxy Backend & Big Data Engineering Interview
+==============================================
+
+As part of the Epoxy engineering interview process, we ask that you design and build a RESTful web service to serve clients, track data, and make recommendations.
+
+SMASHSERVER
+
+SMASHSERVER (SS) is a simple RESTful web service that provides a comprehensive endpoint for clients watching and rating videos on a simplified video site. It does not have any HTML or CSS deliverables.
+
+
+Basic Objects
+-------------
+
+SS should work with with a few basic objects.
+
+ * Videos
+Each video should have a unique title of the form "Video #{id}" where id is a positive integer. Additionally, each video is associated with a genre which is one of:
+
+Action Adventure Animation Biography Comedy Crime Documentary Drama Family Fantasy Film-Noir Game-Show History Horror Music Musical Mystery News Reality-TV Romance Sci-Fi Sport Talk-Show Thriller War Western
+
+ * Users
+Each user should have a unique name of the form of 6 characters in A-Z. A user can have a one-way "friend" relationship with any number of other users. Users can watch and rate videos. Ratings take the form of a simple integer 1-5 rating where 5 is best.
+
+
+API
+---
+
+The specific design of the RESTful API calls is open, but it should support the following actions:
+
+(For general client interaction)
+GET
+ * Unwatched video - Given a genre and user, this action should return a video the user has not watched from the genre. If no unwatched videos remain, this action should return null. Selecting a random unviewed video should be fast when a user has viewed both a minority and a majority of videos in a genre.
+
+POST
+ * Watch - User watches a video, user can watch a video more than once.
+ * Rate - User rates a video, user can rate a video more than once.
+
+(For a user profile page)
+GET
+ * Five videos most recently watched by a user
+ * Five videos most frequently watched by a user
+ * Five videos most recommended for a user - how recommendations are determined is open
+
+For all actions that return videos, the data returned must include:
+ * Video title
+ * Genre
+ * Simple mean of all ratings for the video
+ * Number of views by the user
+ * Timestamp of the last time the user watched the video
+
+
+Scalability Requirements
+------------------------
+
+The app should be able to support a Large number of videos, users, watches and ratings.
+
+
+Technology Stack
+----------------
+
+ * Node.js 0.8.x
+ * MongoDB 2.2.x
+ + Any relevant additional storage, ETL, or analysis tools
+
+
+Deliverables
+------------
+
+ * Service components
+ * Instructions for getting the service up-and-running in Mac OS X or Ubuntu
+ * A script for generating a large number of videos and users where users have 0-20 friends each
+ * Simple CLI script for interacting with the actions

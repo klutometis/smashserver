@@ -1,0 +1,13 @@
+* Mongo
+  - [[http://docs.mongodb.org/manual/tutorial/model-tree-structures-with-parent-references/][Indices]]
+  - [[http://docs.mongodb.org/manual/tutorial/model-tree-structures-with-ancestors-array/][Adjacency list model]]
+  - [[http://docs.mongodb.org/manual/crud/][CRUD]]
+  - [[http://docs.mongodb.org/manual/applications/create/][Create]]: “The save() method is identical to an update operation
+    with the upsert flag.”
+* Node
+  - [[https://github.com/substack/node-optimist][Parsing command lines]]
+  - [[http://documentcloud.github.com/underscore/][Underscore]]
+  - [[http://howtonode.org/express-mongodb][Express example with mongo]]
+  - [[http://project70.com/nodejs/beginners-tutorial-node-js/][Node 70]]
+  - [[http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js][SO]]
+  - [[http://expressjs.com/guide.html][Express guide]]
