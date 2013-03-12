@@ -1,3 +1,8 @@
+* TODO API
+  - =unwatched?user=x&genre=y=
+  - =watch?user=x&rating=y=
+  - =/users/:id/genre/:genre/unwatched=
+  - =/users/:id/video/:id/rating=
 * Mongo
   - [[http://docs.mongodb.org/manual/tutorial/model-tree-structures-with-parent-references/][Indices]]
   - [[http://docs.mongodb.org/manual/tutorial/model-tree-structures-with-ancestors-array/][Adjacency list model]]
